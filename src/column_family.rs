@@ -54,6 +54,12 @@ pub struct ColumnFamily {
     pub(crate) inner: *mut ffi::rocksdb_column_family_handle_t,
 }
 
+impl ColumnFamily {
+    pub fn get_id(&self) -> u32 {
+        unsafe { ffi::rocksdb_column_family_handle_get_id(self.inner) }
+    }
+}
+
 /// A specialized opaque type used to represent a column family by the [`MultiThreaded`]
 /// mode. Clone (and Copy) is derived to behave like `&ColumnFamily` (this is used for
 /// single-threaded mode). `Clone`/`Copy` is safe because this lifetime is bound to DB like
