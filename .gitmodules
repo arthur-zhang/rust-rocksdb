@@ -3,4 +3,4 @@
 	url = https://github.com/google/snappy.git
 [submodule "rocksdb_sys/rocksdb"]
 	path = librocksdb-sys/rocksdb
-	url = git@gitee.com:brother18/rocksdb.git
+	url = https://gitee.com/brother18/rocksdb.git
